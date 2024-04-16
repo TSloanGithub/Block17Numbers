@@ -11,27 +11,70 @@ class Numbers {
   }
   count() {
     //return the count of numbers in data
+    console.log(this.data.length);
   }
   printNumbers() {
     //print the numbers in data
+    console.log(this.data);
   }
   odds() {
     //return the odd numbers in data
+    const odds = []
+    for(let i=0; i < this.data.length; i++){
+      if ((this.data[i] % 2) === 1){
+        odds.push(this.data[i])
+      }
+    } return odds;
   }
   evens() {
     //return the even numbers in data
+    const evens = [];
+    for(let i = 0; i < this.data.length; i++){
+      if ((this.data[i] % 2) === 0){
+        evens.push(this.data[i]);
+      }
+    } return evens;
   }
+
   sum() {
     //return the sum of the numbers
+    let sum = 0;
+    for (let i = 0; i < this.data.length; i++){
+      sum += this.data[i];
+    }
+    return sum;
+    console.log(sum);
   }
   product() {
     //return the product of the numbers
+    let product = 1;
+    for (let i = 0; i < this.data.length; i++){
+      product *= this.data[i]
+    }
+    return product;
+    console.log(product);
   }
   greaterThan(target) {
     //return the numbers greater than the target
+    let numsGreaterThan = [];
+    for(let i =0; i < this.data.length; i++){
+      if(this.data[i] > target){
+        numsGreaterThan.push(this.data[i]);
+      }
+    } return numsGreaterThan;
   }
   howMany(target) {
     //return the count of a given number
+    //Declaring numCount as an empty array to store my count of each number
+
+    const numCount = {};
+    for(let i=0; i < this.data.length; i++){
+      if(this.data[i] === target){
+        numCount.push(this.data[i]);
+        console.log("This is how many times " + $target + numCount.length + "is in the data");
+      }
+    }
+
   }
 }
 
